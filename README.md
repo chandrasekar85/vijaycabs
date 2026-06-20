@@ -27,3 +27,31 @@ Then visit `http://localhost:8080`.
 4. Choose **Deploy from a branch**.
 5. Select the branch and `/ (root)` folder.
 6. Save and wait for GitHub to publish the site.
+
+## Custom domain
+
+The GitHub Pages custom domain is configured by the `CNAME` file:
+
+```text
+www.tirupurvijaycabs.online
+```
+
+At the domain DNS provider, add:
+
+```text
+Type: CNAME
+Name: www
+Value: chandrasekar85.github.io
+```
+
+Optional apex redirect support:
+
+```text
+Type: A
+Name: @
+Values:
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+```
